@@ -1,3 +1,10 @@
 body {
-background: aquamarine;
+background: rgb(255, 208, 127);
+}
+h1 {
+  text-align: center;
+
+}
+footer {
+  text-align: center;
 }
