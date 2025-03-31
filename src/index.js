@@ -1,12 +1,25 @@
-function generatePoem(event) {
-  event.preventDefault()
- 
+
+function displayPoem(response) {
   new Typewriter('#poem', {
-    strings: "Oh Canada, we stand on guard for thee",
+    strings: response.data.answer,
     autoStart: true,
     delay: 1,
     cursor:"",
   });
+  
+}
+function generatePoem(event) {
+  event.preventDefault();
+
+  let instructionsInput = document.querySelector("#user-instructions");
+
+  
+  let apiKey = "a245cfb18ac0fc4e1161o64431840t19";
+  let context = "You are a cultural poem expert and are passionate about writing impactful short poems. Please create a 4 line poem in basic HTML. Separate each line of the poem with <br />. Follow the User instructions"
+  let prompt = `User instructions:Please generate a Canadian poem about ${instructionsInput.value}`;
+  let apiURL = `https://api.shecodes.io/ai/v1/generate?prompt=${prompt}&context=${context}&key=${key}`;
+
+  axios.get(apiURL).then(displayPoem);
  
 }
 
