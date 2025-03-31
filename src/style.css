@@ -1,9 +1,11 @@
 body {
   font-family: Arial, Helvetica, sans-serif;
-  background-color: bisque;
-  }
+  background-image: 
+  url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/161/877/original/mahesh-gupta-DJyvMB_EgGs-unsplash_copy_2.jpg?1743425710");
+
+} 
   a {
-    color: #3e63da;
+    color: white;
   }
   .container {
     margin: 120px auto;
@@ -49,7 +51,7 @@ body {
         }
   .submit-button{
       margin-left: 10px;
-      background: #3e63da;
+      background: #5ca1a6;
       width: 150px;
       font-size: 16px;
       color: white;
@@ -62,7 +64,7 @@ body {
       background-color: white;
       padding: 20px;
       line-height: 2;
-      border-left: 3px solid #3e63da;
+      border-left: 3px solid #5ca1a6;
       border-radius: 10px;
       box-shadow: 0px 4px 30px 0px rgba(39, 33, 66, 0.03);
       }
