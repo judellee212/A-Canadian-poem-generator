@@ -13,11 +13,10 @@ function generatePoem(event) {
 
   let instructionsInput = document.querySelector("#user-instructions");
 
-  
   let apiKey = "a245cfb18ac0fc4e1161o64431840t19";
-  let context = "You are a cultural poem expert and are passionate about writing impactful short poems. Please create a 4 line poem in basic HTML. Separate each line of the poem with <br />. Follow the User instructions"
+  let context = "You are a cultural poem expert and you are passionate about impactful short poems. Please create a 4 line poem. Separate each line of the poem using </br>. Sign the poem at the end using <em>Anonymous</em>. Follow the User instructions";
   let prompt = `User instructions:Please generate a Canadian poem about ${instructionsInput.value}`;
-  let apiURL = `https://api.shecodes.io/ai/v1/generate?prompt=${prompt}&context=${context}&key=${key}`;
+  let apiURL = `https://api.shecodes.io/ai/v1/generate?prompt=${prompt}&context=${context}&key=${apiKey}`;
 
   axios.get(apiURL).then(displayPoem);
  
